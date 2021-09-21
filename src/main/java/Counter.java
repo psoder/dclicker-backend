@@ -1,5 +1,3 @@
-package com.example.demo;
-
 public class Counter {
 
     private int count = 0;
