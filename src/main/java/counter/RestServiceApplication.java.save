@@ -2,9 +2,6 @@ package counter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class RestServiceApplication {
@@ -18,10 +15,11 @@ public class RestServiceApplication {
 	return new WebMvcConfigurer() {
         	@Override
 		public void addCorsMappings(CorsRegistry registry) {
-			registry.addMapping("/counter/**").allowedOrigins("https://clicker.psoder.net");
-
-			registry.addMapping("/counter/**").allowedOrigins("*");
-		}
+			registry.addMapping("/counter").allowedOrigins("https://85.230.176.103:8080/counter");
+			registry.addMapping("/counter").allowedOrigins("http://85.230.176.103:8080/counter");
+			registry.addMapping("/counter/update").allowedOrigins("https://85.230.176.103:8080/counter/update");
+			https://85.230.176.103:8080		
+}
 	};
     }
 
