@@ -19,8 +19,9 @@ public class RestServiceApplication {
         	@Override
 		public void addCorsMappings(CorsRegistry registry) {
 			registry.addMapping("/counter/**").allowedOrigins("https://clicker.psoder.net");
-
 			registry.addMapping("/counter/**").allowedOrigins("*");
+			registry.addMapping("/counter").allowedOrigins("*");
+			registry.addMapping("/counter/update").allowedOrigins("*");
 		}
 	};
     }
