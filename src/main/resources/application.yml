@@ -1,0 +1,8 @@
+server:
+  ssl:
+    key-store: classpath:dclicker.p12
+    key-store-password: 
+    key-store-type: pkcs12
+    key-alias: dclicker
+    key-password: 
+  port: 9001
