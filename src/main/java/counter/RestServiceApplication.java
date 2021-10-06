@@ -18,12 +18,10 @@ public class RestServiceApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/counter/**").allowedOrigins("https://clicker.psoder.net");
-				registry.addMapping("/counter/**").allowedOrigins("*");
-				registry.addMapping("/counter/").allowedOrigins("*");
-				registry.addMapping("/counter/").allowedOrigins("https://10.179.121.88:9000");
-				registry.addMapping("/counter/").allowedOrigins("https://172.18.188.255:3000");
-				registry.addMapping("/counter/").allowedOrigins("https://localhost:3000");
+				registry.addMapping("/**").allowedOrigins("https://clicker.psoder.net");
+				registry.addMapping("/counter/update").allowedOrigins("https://clicker.psoder.net");
+				registry.addMapping("/**").allowedOrigins("https://ddagen.se/");
+				registry.addMapping("/counter/update").allowedOrigins("https://ddagen.se/");				
 			}
 		};
 	}
